@@ -1,0 +1,58 @@
+<div class="pb-10">
+  <h1 class="anchor fw-bolder mb-5" id="overview-angular-material">
+    <a href="#overview-angular-material"></a>Angular Material
+  </h1>
+  <div class="py-5">
+    <p>This guide explains how to set up your Angular project to begin using Angular Material. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample Material component in your application to verify your setup.</p>
+  </div>
+</div>
+
+<div class="pb-10">
+  <h1 class="anchor fw-bolder mb-5" id="install-angular-material">
+    <a href="#install-angular-material"></a>Install Angular Material
+  </h1>
+  <div class="py-5">
+    <p>Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:</p>
+
+    <app-code-block language="bash" [code]="'ng add @angular/material'"></app-code-block>
+
+    <p>The ng add command will additionally perform the following actions:</p>
+
+    <ul>
+      <li>Add project dependencies to <code>package.json</code></li>
+      <li>Add the Roboto font to your <code>index.html</code></li>
+      <li>Add the Material Design icon font to your <code>index.html</code></li>
+      <li>Add a few global CSS styles to:
+        <ul>
+          <li>Remove margins from <code>body</code></li>
+          <li>Set <code>height: 100%</code> on <code>html</code> and <code>body</code></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+
+<div class="pb-10">
+  <h1 class="anchor fw-bolder mb-5" id="display-angular-material">
+    <a href="#display-angular-material"></a>Display a component
+  </h1>
+  <div class="py-5">
+
+    <p>Let's display a slider component in your app and verify that everything works.</p>
+
+    <p>You need to import the <code>MatSliderModule</code> that you want to display by adding the following lines to your <code>app.module.ts</code> file.</p>
+
+    <p>Add the <code>&lt;mat-slider&gt;</code> tag to the <code>app.component.html</code> like so:</p>
+
+    <app-code-block language="html" [code]="'&lt;mat-slider min=&quot;1&quot; max=&quot;100&quot; step=&quot;1&quot; value=&quot;50&quot;&gt;&lt;/mat-slider&gt;'"></app-code-block>
+
+    <p>Run your local dev server:</p>
+
+    <app-code-block language="bash" [code]="'ng serve'"></app-code-block>
+
+    <p>Then point your browser to <a href="http://localhost:4200" target="_blank">http://localhost:4200</a>. You should see the Material slider component on the page.</p>
+
+  </div>
+</div>

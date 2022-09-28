@@ -1,0 +1,51 @@
+<div class="accordion accordion-flush accordion-icon-toggle" id="kt_accordion">
+  <!--begin::Item-->
+  <div class="accordion-item mb-5" *ngFor="let changelog of changelogs | keyvalue">
+
+    <!--begin::Header-->
+    <div class="accordion-header py-3 d-flex" data-bs-toggle="collapse" [attr.data-bs-target]="'#kt_accordion_body_' + changelog.key | toSlug" aria-expanded="true">
+      <span class="accordion-icon">
+        <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+        <span
+          [inlineSVG]="'./assets/media/icons/duotune/arrows/arr064.svg'"
+          class="svg-icon svg-icon-2x mt-1"
+        ></span>
+        <!--end::Svg Icon-->
+      </span>
+      <h3 class="fs-2 text-gray-800 fw-bolder mb-0 ms-4">Metronic {{ changelog.key }} - {{ changelog.value.date }}</h3>
+    </div>
+    <!--end::Header-->
+    <!--begin::Body-->
+    <div id="kt_accordion_body_{{ changelog.key | toSlug }}" class="fs-6 mt-1 mb-1 py-0 ps-10 collapse show" data-bs-parent="#kt_accordion">
+      <div class="accordion-body ps-0 pt-0">
+        <div class="mb-5" *ngIf="changelog.value.changelog.new && changelog.value.changelog.new.length">
+          <h3 class="fs-6 fw-bolder mb-1">New:</h3>
+          <ul class="my-0 py-0">
+            <li class="py-2" *ngFor="let item of changelog.value.changelog.new">
+              <span [innerHTML]="item"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-5" *ngIf="changelog.value.changelog.update && changelog.value.changelog.update.length">
+          <h3 class="fs-6 fw-bolder mb-1">Update:</h3>
+          <ul class="my-0 py-0">
+            <li class="py-2" *ngFor="let item of changelog.value.changelog.update">
+              <span [innerHTML]="item"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="mb-5" *ngIf="changelog.value.changelog.fix && changelog.value.changelog.fix.length">
+          <h3 class="fs-6 fw-bolder mb-1">Fix:</h3>
+          <ul class="my-0 py-0">
+            <li class="py-2" *ngFor="let item of changelog.value.changelog.fix">
+              <span [innerHTML]="item"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--end::Body-->
+  </div>
+
+  <!--end::Item-->
+</div>

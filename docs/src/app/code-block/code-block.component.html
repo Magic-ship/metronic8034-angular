@@ -1,0 +1,15 @@
+<div class="highlight">
+  <!-- Copy btn -->
+  <a class="highlight-copy btn" ngbTooltip="Copy Code" (click)="copy()">{{
+    copyText
+  }}</a>
+
+  <!-- Code -->
+  <div class="highlight-code">
+    <pre [ngClass]="'language-' + language">
+      <code [ngClass]="'language-' + language">
+        {{ code }}
+      </code>
+    </pre>
+  </div>
+</div>

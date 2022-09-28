@@ -1,0 +1,69 @@
+<div class="pb-10">
+  <h1 class="anchor fw-bolder mb-5" id="angular-material-card">
+    <a href="#angular-material-card"></a>Overview
+  </h1>
+  <div class="py-5">
+    <p><a href="https://material.angular.io/components/card/overview" target="_blank"><code>&lt;mat-card&gt;</code></a> is a content container for text, photos, and actions in the context of a single subject.</p>
+  </div>
+</div>
+
+<div class="pb-10">
+  <h1 class="anchor fw-bolder mb-5" id="basic-angular-material">
+    <a href="#basic-angular-material"></a>Basic Card
+  </h1>
+  <div class="py-5">
+    <mat-card>
+      <mat-card-title>Title</mat-card-title>
+      <mat-card-content>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </mat-card-content>
+    </mat-card>
+
+    <app-code-block language="html" [code]="'<mat-card>\n'+
+'      <mat-card-title>Title</mat-card-title>\n'+
+'      <mat-card-content>\n'+
+'        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n'+
+'      </mat-card-content>\n'+
+'    </mat-card>'"></app-code-block>
+  </div>
+</div>
+
+<div class="pb-10">
+  <h1 class="anchor fw-bolder mb-5" id="image-angular-material">
+    <a href="#image-angular-material"></a>Basic card sections
+  </h1>
+  <div class="py-5">
+    <div class="col-md-6">
+      <mat-card>
+        <mat-card-title>Fluid Image</mat-card-title>
+        <mat-card-content>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </mat-card-content>
+        <img mat-card-image src="assets/media/illustrations/sketchy-1/1.png" alt="illustrations">
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <app-code-block language="html" [code]="'\n'+
+'      <mat-card>\n'+
+'        <mat-card-title>Fluid Image</mat-card-title>\n'+
+'        <mat-card-content>\n'+
+'          <p>\n'+
+'            Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n'+
+'          </p>\n'+
+'        </mat-card-content>\n'+
+'        <img mat-card-image src=&quot;assets/media/illustrations/sketchy-1/1.png&quot; alt=&quot;illustrations&quot;>\n'+
+'        <mat-card-actions>\n'+
+'          <button mat-button>LIKE</button>\n'+
+'          <button mat-button>SHARE</button>\n'+
+'        </mat-card-actions>\n'+
+'      </mat-card>'"></app-code-block>
+  </div>
+</div>
+
+
